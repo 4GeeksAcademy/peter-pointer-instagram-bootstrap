@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Fontawesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Instagram Feed Bootstrap</title>
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-light bg-light py-3">
+        <div class="container-fluid">
+            <div class="d-flex w-100 justify-content-between">
+                <div>
+                    <i class="fa-brands fa-instagram fa-2xl"></i>
+                    <h5 class="d-inline-block fs-5">Instagram</h5>
+                </div>
+                <div class="d-flex align-right justify-content-end">
+                    
+                    <!-- Modal button trigger-->
+                    <button type="button" class="btn btn-success me-2" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop">
+                        Create a new post
+                    </button>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-gear"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li><a class="dropdown-item" href="#">Accesibility</a></li>
+                            <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Modal Body -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Create a new post</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Caption:</h6>
+                    <textarea class="form-control" placeholder="Add the caption of your post here"
+                        id="floatingTextarea2" style="height: 100px"></textarea>
+                    <div class="row p-2">
+                        <button class="col-1 border rounded p-1 m-1 btn-light">
+                            <i class="fa-solid fa-camera"></i>
+                        </button>
+                        <button class="col-1 border rounded p-1 m-1 btn-light">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success">Publish</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Settings picture grid -->
+    
+        
+            <ul class="nav nav-tabs d-flex justify-content-center" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane"
+                        type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true"><i
+                            class="fa-solid fa-table-cells"></i></button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane"
+                        type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false"><i
+                            class="fa-regular fa-square"></i></button>
+                </li>
+
+            </ul>
+        
+    
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
+                tabindex="0">
+
+                <!-- 3 pictures per row -->
+                <div class="container text-center">
+                    
+                <!-- First Row -->
+                    <div class="row m-4">
+                        <div class="col">
+                            <img src="https://images.prismic.io/erc-system/ZoQPeB5LeNNTwtvI_02.jpg?auto=format%2Ccompress&rect=0%2C0%2C1999%2C1332&w=878&h=585&q=70"
+                                class="img-fluid w-100 h-100 rounded-2" alt="...">
+                        </div>
+                        <div class="col">
+                            <img src="https://images.prismic.io/erc-system/ZoPAFB5LeNNTws6P_240611_ERC_Romeo_HERO2.jpg?auto=format%2Ccompress&rect=0%2C0%2C3840%2C2557&w=3000&h=1998&q=70"
+                                class="img-fluid w-100 h-100 rounded-2" alt="...">
+                        </div>
+                        <div class="col">
+                            <img src="https://images.prismic.io/erc-system/ZoPEBR5LeNNTws-B_217c97f9fa1932997558ab567c33c07d.jpg?auto=format%2Ccompress&rect=1%2C0%2C4095%2C2304&w=3000&h=1688&q=70"
+                                class="img-fluid w-100 h-100 rounded-2" alt="...">
+                        </div>
+                    </div>
+
+                <!-- Second Row -->
+                    <div class="row m-4">
+                        <div class="col">
+                            <img src="https://evtol.news/__media/Aircraft%20Directory%20Images%20Lift%20plus%20Cruise/Volocopter%20VoloConnect/Volocopter-VoloConnect-top.jpg"
+                                class="img-fluid w-100 h-100 rounded-2" alt="...">
+                        </div>
+                        <div class="col">
+                            <img src="https://assets.newatlas.com/dims4/default/3416a90/2147483647/strip/true/crop/2166x1444+0+0/resize/2166x1444!/quality/90/?url=http%3A%2F%2Fnewatlas-brightspot.s3.amazonaws.com%2F58%2F92%2F1ef3a96841af92b3502cb5d097ab%2F20220607-voloconnect-release-image-5-scaled.jpeg"
+                                class="img-fluid w-100 h-100 rounded-2" alt="...">
+                        </div>
+                        <div class="col">
+                            <img src="https://cdn.volocopter.com/images/vnrac6vfvrab/5B0RfA8Entbqpfy1R2IqMq/5132faba00de43821119645bec4bfe46/VoloDrone-in-flight-with-cargo-box.jpg"
+                                class="img-fluid w-100 h-100 rounded-2" alt="...">
+                        </div>
+                    </div>
+
+                <!-- Third Row -->    
+                    <div class="row m-4">
+                        <div class="col">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/VoloCity.jpg"
+                                class="img-fluid w-100 h-100 rounded-2" alt="...">
+                        </div>
+                        <div class="col">
+                            <img src="https://i.dailymail.co.uk/1s/2022/04/14/12/56607435-0-image-a-42_1649934519750.jpg"
+                                class="img-fluid w-100 h-100 rounded-2" alt="...">
+                        </div>
+                        <div class="col">
+                            <img src="https://luftrettung.adac.de/app/uploads/2023/09/Foto-2-1600x979.jpg"
+                                class="img-fluid w-100 h-100 rounded-2" alt="...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 1 picture per row -->
+            <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                
+                <!-- First picture -->
+                <div class="container-fluid d-flex justify-content-center my-3">
+                    <div class="card">
+                        <div class="card-header d-flex justify-content-between">
+                            <strong>Starnbergersee</strong>
+                            <div>08/26</div>
+                        </div>
+                        <div class="card" style="width: 32rem;">
+                            <img src="https://www.vier-jahreszeiten-starnberg.de/(cms)/media/resize/size=1024x768%2Cscale=crop%2Cinterlace=1%2Cquality=70/1470637"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <strong>532 likes</strong>
+                                <p class="card-text">Located in southern Bavaria 25 kilometres (16 mi) southwest of
+                                    Munich,
+                                    Lake Starnberg is a popular recreation area for the city and, since 1976, one of the
+                                    wetlands of international importance protected by the Ramsar Convention.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Second picture -->
+                <div class="container-fluid d-flex justify-content-center my-3">
+                    <div class="card">
+                        <div class="card-header d-flex justify-content-between">
+                            <strong>Eibsee</strong>
+                            <div>11/09</div>
+                        </div>
+                        <div class="card" style="width: 32rem;">
+                            <img src="https://www.eibsee.de/(cms)/media/resize/size=1024x768%2Cscale=crop%2Cinterlace=1%2Cquality=75/2628453"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <strong>252 likes</strong>
+                                <p class="card-text">Eibsee ("yew lake") is a lake in Bavaria, Germany, 9 km southwest
+                                    of
+                                    Garmisch-Partenkirchen and roughly 100 km southwest of Munich. It is 973.28 metres
+                                    (3,193.2 ft) above sea-level and its surface area is 177.4 hectares (438 acres).</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Third picture -->
+                <div class="container-fluid d-flex justify-content-center my-3">
+                    <div class="card">
+                        <div class="card-header d-flex justify-content-between">
+                            <strong>Seealpsee</strong>
+                            <div>05/16</div>
+                        </div>
+                        <div class="card" style="width: 32rem;">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Wasserauen-Seealpsee.jpg"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <strong>822 likes</strong>
+                                <p class="card-text">Seealpsee is a lake in the Alpstein range of the canton of
+                                    Appenzell
+                                    Innerrhoden, Switzerland. At an elevation of 1,143.2 m, the surface area is 13.6
+                                    hectares (34 acres). The lake can be reached by foot from Wasserauen or from
+                                    Ebenalp. It
+                                    is a popular tourist destination.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- bootstrap link -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>
